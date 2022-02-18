@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js">
     <head>
+        
         <!-- Basic Page Needs
         ================================================== -->
         <meta charset="utf-8">
@@ -14,6 +15,7 @@
         ================================================== -->
         <meta name="format-detection" content="telephone=no">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
         
         <!-- Template CSS Files
         ================================================== -->
@@ -33,7 +35,8 @@
         <link rel="stylesheet" href="css/main.css">
         <!-- responsive css -->
         <link rel="stylesheet" href="css/responsive.css">
-        
+
+ 
         <!-- Template Javascript Files
         ================================================== -->
         <!-- modernizr js -->
@@ -87,9 +90,11 @@
 		<!-- Main -->
 		<script src="js/main3.js"></script>
 
+        
     </head>
+
     <body>
-        <!--
+         <!--
         ==================================================
         Header Section Start
         ================================================== -->
@@ -120,9 +125,9 @@
                     <div class="main-menu">
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="index.html" >Home</a></li>      
+                            <li><a href="Goals.html">Goal</a></li>
                             <li><a href="Improvements.html">Improvements</a></li>
-							<li><a href="Goals.html">Goals</a></li>
-						</ul>
+                        </ul>
                     </div>
                 </nav>
                 <!-- /main nav -->
@@ -245,60 +250,10 @@
 				</div>
 			</div>
 		</div>
-		
 
-		<div id="fh5co-features" class="animate-box">
-			<div class="container">
-				<div class="services-padding">
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-							<h2>Job Areas</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-4 text-center">
-							<div class="feature-left">
-								<span class="icon">
-									<i class="icon-briefcase"></i>
-								</span>
-								<div class="feature-copy">
-									<h3>Software Engineering</h3>
-									<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
-								</div>
-							</div>
 
-						</div>
 
-						<div class="col-md-4 text-center">
-							<div class="feature-left">
-								<span class="icon">
-									<i class="icon-search"></i>
-								</span>
-								<div class="feature-copy">
-									<h3>Data Analytics</h3>
-									<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
-								</div>
-							</div>
-						</div>
-		
-						<div class="col-md-4 text-center">
-							<div class="feature-left">
-								<span class="icon">
-									<i class="icon-bargraph"></i>
-								</span>
-								<div class="feature-copy">
-									<h3>Web Developent</h3>
-									<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!--
+	   <!--
         ==================================================
         Call To Action Section Start
         ================================================== -->
@@ -310,6 +265,8 @@
                             <h2 class="title wow fadeInDown" >WOW, THINKING OF HIRING ME?</h1>
                             <h2><p class="wow fadeInDown"">Currently studying full time. 
                                 <br>Graduation Date: May 2022</p></h2>
+                                <p>Until Graduation : </p>
+                                <p id="demo"></p>
                             <a href = "mailto:erifeoluwa@gmail.com?subject = Feedback&body = Message" class="btn btn-default btn-contact wow fadeInDown">Contact Me</a>
                         </div>
                     </div>
@@ -351,6 +308,37 @@
                 </div>
             </div>
         </footer> <!-- /#footer -->
+
+        <script>
+            // Set the date we're counting down to
+            var countDownDate = new Date("May 30, 2022 15:37:25").getTime();
+            
+            // Update the count down every 1 second
+            var x = setInterval(function() {
+            
+              // Get today's date and time
+              var now = new Date().getTime();
+                
+              // Find the distance between now and the count down date
+              var distance = countDownDate - now;
+                
+              // Time calculations for days, hours, minutes and seconds
+              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+              // Output the result in an element with id="demo"
+              document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+              + minutes + "m " + seconds + "s ";
+                
+              // If the count down is over, write some text 
+              if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+              }
+            }, 1000);
+            </script>
             
     </body>
 </html>
